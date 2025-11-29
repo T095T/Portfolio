@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -118,7 +118,7 @@
 }
 
 .dark {
-  --background: hsl(0, 3%, 6.5%);
+  --background: #000000;
   --foreground: oklch(0.985 0 0);
   --loader-bg: hsl(0, 3%, 6.5%);
   --card: oklch(0.21 0.006 285.885);

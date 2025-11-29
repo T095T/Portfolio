@@ -1,6 +1,6 @@
 
 import React from 'react'
-import HomeContent from '../src/components/HomeContent'
+import HomeContent from '../components/HomeContent'
 
 const page = () => {
   return (
