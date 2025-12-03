@@ -4,6 +4,7 @@ import ProfileHeader from "./ProfileHeader";
 import ContentSection from "./ContentSection";
 import ContentParagraph from "./ContentParagraph";
 import DiagonalPattern from "./DiagonalPattern";
+import Skills from "./Skills";
 
 export default function NewHeroSection() {
   return (
@@ -49,6 +50,7 @@ export default function NewHeroSection() {
             useful, enjoyable experiences that make a difference for real users.
           </ContentParagraph>
         </ContentSection>
+        <Skills className="ml-[0.6] "/>
       </div>
     </div>
   );
