@@ -2,6 +2,20 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import Starfield from "../components/Starfield";
+//Technor Font
+import localFont from "next/font/local";
+
+
+const myFont = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Technor-Regular.woff2",
+      weight: "400",
+    },
+  ],
+  variable: "--font-technor",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}  ${myFont.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -34,6 +48,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          <Starfield />
           {children}
         </ThemeProvider>
       </body>

@@ -7,7 +7,7 @@ import DiagonalPattern from "./DiagonalPattern";
 
 export default function NewHeroSection() {
   return (
-    <div className="min-h-screen transition-colors duration-300 relative style={{ fontFamily: 'var(--font-geist-sans)'}} ">
+    <div className="min-h-screen transition-colors duration-300 relative bg-background z-0" style={{ fontFamily: 'var(--font-geist-sans)' }}>
       <div className="relative mx-auto max-w-4xl">
         {/*Import Pattern code */}
         <DiagonalPattern side="left" />
@@ -32,6 +32,9 @@ export default function NewHeroSection() {
             />
           </div>
         </div>
+
+
+        
         {/*About Section */}
         <ContentSection className="pb-6 sm:pb-8 pt-4 sm:pt-6 px-2 sm:px-0">
           <ContentParagraph className="mb-2 text-base sm:text-lg">

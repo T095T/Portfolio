@@ -3,9 +3,10 @@
 interface ContentSectionProps {
   title?: string
   subtitle?: string
-  children: React.ReactNode
+  children?: React.ReactNode
   className?: string
   background?: boolean
+  
 }
 
 export default function ContentSection({

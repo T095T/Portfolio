@@ -37,10 +37,10 @@ export default function ProfileHeader({
       />
       <div className="text-left sm:flex sm:justify-between sm:items-center w-full sm:px-8 px-4 flex-col sm:flex-row">
         <div className="px-0">
-          <h1 className="font-[family-name:var(--font-instrument-serif)] text-2xl sm:text-4xl tracking-[0.01em] font-medium mb-0">
+          <h1 className="font-technor text-2xl sm:text-4xl tracking-[0.01em] font-medium mb-0">
             {name}
           </h1>
-          <p className="opacity-40 text-xs sm:text-sm">
+          <p className=" font-sans-light opacity-40 text-xs sm:text-sm">
             {age} • {title}
           </p>
         </div>
