@@ -16,9 +16,9 @@ const Skills = ({className}) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="text-neutral-400 dark:text-neutral-300 leading-relaxed text-sm font-medium text-xl ml-5"
+        className="text-base sm:text-xl mb-3  mt-4 sm:mt-6 px-5 pb-4"
       >
-        Tech-Tools
+      Stack I use
       </motion.p>
       
       <motion.div 
