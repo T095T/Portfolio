@@ -12,12 +12,12 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Projects', href: '/projects' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
-    <div className='z-50 w-full h-12 flex justify-center border font-stack font-light text-neutral-700 dark:text-neutral-300 top-0 sticky border-neutral-100 dark:border-neutral-900 dark:bg-black bg-[#fdfcff] '>
+    <div className='z-50 w-full h-12 flex justify-center  font-stack font-light text-neutral-700 dark:text-neutral-300 top-0 sticky border-neutral-100  dark:bg-black bg-[#fdfcff] '>
       <div className='h-full border absolute left-[16.62%] dark:border-neutral-950 border-[#f4f3f3] hidden md:block' />
       <div className='h-full border absolute right-[16.62%] dark:border-neutral-950 border-[#f4f3f3] hidden md:block' />
 

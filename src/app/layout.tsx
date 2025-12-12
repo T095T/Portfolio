@@ -48,7 +48,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <Starfield />
+          {/* <Starfield /> */}
           {children}
         </ThemeProvider>
       </body>
