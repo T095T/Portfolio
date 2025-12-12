@@ -3,6 +3,27 @@ import Navbar from "../../components/Navbar";
 import ProjectCard from "@/src/components/ProjectCard";
 
 function Projects() {
+  const projects = [
+    {
+      title: "NoteCraft",
+
+      className: "bg-neutral-900 text-white",
+      link: "https://github.com/T095T/NoteCraft",
+    },
+    {
+      title: "Nike Landing Page",
+
+      className: "hover:shadow-xl border border-blue-500",
+      link: "",
+    },
+    {
+      title: "Portfolio Website",
+
+      className: "bg-neutral-100 dark:bg-neutral-800",
+      link: "",
+    },
+  ];
+
   return (
     <>
       <Navbar />
@@ -18,7 +39,16 @@ function Projects() {
           </p>
         </div>
       </section>
-      <ProjectCard className="w-full max-w-none px-2 "/>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            className={project.className}
+            link={project.link}
+          />
+        ))}
+      </div>
     </>
   );
 }
