@@ -1,27 +1,26 @@
 import { skills } from "@/utils/skills";
-import { motion } from 'motion/react';
- 
+import { motion } from "motion/react";
 
-const Skills = ({className}) => {
+const Skills = ({ className }: { className?: string }) => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 1, ease: "easeOut" }} 
+      transition={{ duration: 1, ease: "easeOut" }}
       className={`space-y-4 mb-4 rounded-lg w-full -mt-2 py-4 px-4 max-w-screen mx-auto ${className}`}
     >
-      <motion.p 
+      <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         className="text-base sm:text-xl mb-3  mt-4 sm:mt-6 px-5 pb-4"
       >
-      Stack I use
+        Stack I use
       </motion.p>
-      
-      <motion.div 
+
+      <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -29,9 +28,9 @@ const Skills = ({className}) => {
           visible: {
             transition: {
               staggerChildren: 0.04,
-              delayChildren: 0.2
-            }
-          }
+              delayChildren: 0.2,
+            },
+          },
         }}
         className="grid grid-cols-8 gap-3 sm:grid-cols-[repeat(13,minmax(0,1fr))] sm:w-fit ml-5"
       >
@@ -41,32 +40,32 @@ const Skills = ({className}) => {
             <motion.div
               key={skill.name}
               variants={{
-                hidden: { 
-                  opacity: 0, 
+                hidden: {
+                  opacity: 0,
                   scale: 0.8,
-                  y: 20
+                  y: 20,
                 },
-                visible: { 
-                  opacity: 1, 
+                visible: {
+                  opacity: 1,
                   scale: 1,
                   y: 0,
                   transition: {
                     duration: 0.5,
-                    ease: [0.22, 1, 0.36, 1]
-                  }
-                }
+                    ease: [0.22, 1, 0.36, 1],
+                  },
+                },
               }}
-              whileHover={{ 
+              whileHover={{
                 y: -4,
                 scale: 1.05,
-                transition: { 
+                transition: {
                   duration: 0.2,
-                  ease: "easeOut"
-                }
+                  ease: "easeOut",
+                },
               }}
-              whileTap={{ 
+              whileTap={{
                 scale: 0.95,
-                transition: { duration: 0.1 }
+                transition: { duration: 0.1 },
               }}
               className="relative group cursor-pointer border border-neutral-300 p-2 md:p-2 rounded-md
                 hover:bg-neutral-100 dark:hover:bg-neutral-800
@@ -80,23 +79,23 @@ const Skills = ({className}) => {
                 // @ts-ignore
                 "--hover-color": skill.color,
                 // @ts-ignore
-                "--hover-color-dark": skill.colorDark || skill.color
+                "--hover-color-dark": skill.colorDark || skill.color,
               }}
             >
               <motion.div
-                whileHover={{ 
+                whileHover={{
                   scale: 1.15,
                   rotate: [0, -5, 5, 0],
-                  transition: { 
+                  transition: {
                     rotate: {
                       duration: 0.5,
-                      ease: "easeInOut"
+                      ease: "easeInOut",
                     },
                     scale: {
                       duration: 0.2,
-                      ease: "easeOut"
-                    }
-                  }
+                      ease: "easeOut",
+                    },
+                  },
                 }}
               >
                 <Icon
@@ -104,8 +103,8 @@ const Skills = ({className}) => {
                   style={{ color: "inherit" }}
                 />
               </motion.div>
-              
-              <motion.span 
+
+              <motion.span
                 initial={{ opacity: 0, y: 5 }}
                 whileHover={{ opacity: 1, y: 0 }}
                 transition={{ duration: 2 }}
