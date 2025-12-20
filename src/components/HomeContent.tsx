@@ -19,8 +19,8 @@ export default function NewHeroSection() {
     >
       <div className="relative mx-auto max-w-4xl">
         {/*Import Pattern code */}
-        <DiagonalPattern side="left" />
-        <DiagonalPattern side="right" />
+        {/* <DiagonalPattern side="left" />
+        <DiagonalPattern side="right" /> */}
 
         {/*Main Content */}
         <div className="mx-auto sm:w-[calc(100%-120px)] w-full max-w-4xl sm:px-0">

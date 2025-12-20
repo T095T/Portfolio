@@ -20,7 +20,7 @@ export default function ExperienceContent() {
       duration: "January 2024 – March 2024",
       description:
         "Designed and optimized NLP and ML models for disease prediction and drug recommendation, achieving 85% diagnostic accuracy.Integrated a structured medical drug database to enable personalized treatment recommendations usingpredictive analytics.",
-      logoUrl: "/assets/logo.jpg",
+      logoUrl: "/logo.png",
     },
   ];
 

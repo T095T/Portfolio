@@ -1,27 +1,37 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import ProjectCard from "@/src/components/ProjectCard";
+import Contact from "../../components/Contact";
 
 function Projects() {
   const projects = [
     {
       title: "NoteCraft",
 
-      className: "bg-neutral-900 text-white",
+      className: " hover:shadow-xl",
       link: "https://github.com/T095T/NoteCraft",
+      imgsrc: '/Thumbnail-NoteCraft.png'
     },
     {
-      title: "Nike Landing Page",
+      title: "Nexara",
 
-      className: "hover:shadow-xl border border-blue-500",
-      link: "",
+      className: "hover:shadow-xl",
+      link: "https://nexara-five.vercel.app/",
+      imgsrc: '/nexara-pic.png'
     },
     {
-      title: "Portfolio Website",
+      title: "Smart Surveillance and Crime Detection using AI",
 
-      className: "bg-neutral-100 dark:bg-neutral-800",
-      link: "",
+      className: " hover:shadow-xl",
+      link: "https://github.com/T095T/Smart_Surveillance_And_Crime_Detection_Using_AI",
+      imgsrc: '/smart2.png'
     },
+    {
+      title: "Coming soon",
+      imgsrc: '/progr.png',
+      link: '#',
+      className: " hover:shadow-xl",
+    }
   ];
 
   return (
@@ -39,15 +49,19 @@ function Projects() {
           </p>
         </div>
       </section>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 md:p-8">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
             title={project.title}
             className={project.className}
             link={project.link}
+            imgsrc={project.imgsrc}
           />
         ))}
+      </div>
+      <div id="contact">
+        <Contact />
       </div>
     </>
   );

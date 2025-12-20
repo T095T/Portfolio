@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link';
 import ThemeToggle from './ui/theme-toggle';
-import { useState } from 'react';
+import { useState,useRef } from 'react';
 import { TbMenu2, TbX } from 'react-icons/tb';
 // import { motion, AnimatePresence } from 'motion/react';
 
@@ -11,10 +11,16 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
+    { name: 'Home', href: '/' },
     { name: 'Projects', href: '/projects' },
     { name: 'Contact', href: '#contact' },
   ];
+
+
+  //ref for about and contact section
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+
 
   return (
     <div className='z-50 w-full h-12 flex justify-center  font-stack font-light text-neutral-700 dark:text-neutral-300 top-0 sticky border-neutral-100  dark:bg-black bg-[#fdfcff] '>

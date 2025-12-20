@@ -1,63 +1,58 @@
 import React from "react";
+import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
 
+// Define the types for the component props for better type-safety
 interface ProjectCardProps {
   title: string;
-  description: string;
   className?: string;
-  link?:string
+  link: string;
+  imgsrc: string;
 }
 
-const ProjectCard = ({ className = "", title, description ,link}: ProjectCardProps) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  title,
+  className,
+  link,
+  imgsrc,
+}) => {
   return (
-    <div
-      className={`
-        bg-neutral-primary-soft block max-w-sm p-6 border border-slate-700 
-        rounded-md shadow-xs ml-10 mt-20
-        ${className}
-      `}
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`block rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1 ${className} border-2 solid`}
     >
-      <img
-        className="rounded-base"
-        src="/assets/Thumbnail-NoteCraft.png"
-        alt={title}
-      />
-
-      <h5 className="mt-6 mb-5 text-2xl font-semibold tracking-tight text-heading">
-        {title}
-      </h5>
-
-      <p className="text-sm text-neutral-400 mb-5">{description}</p>
-
-      <a
-        href={link}
-        className="
-          inline-flex items-center text-body bg-slate-800 
-          rounded-md box-border border border-default-medium 
-          shadow-xs font-medium leading-5 text-sm px-4 py-2.5
-          hover:border-b-2 hover:border-b-white 
-          hover:border-r-2 hover:border-r-white
-        "
-      >
-        Read more
-        <svg
-          className="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 12H5m14 0-4 4m4-4-4-4"
+     
+      <div className="relative w-full mt-2 rounded-md aspect-video">
+        {imgsrc ? (
+          <Image
+            src={imgsrc}
+            alt={`Screenshot of ${title}`}
+            fill
+            style={{ objectFit: "contain" }}
+            className="transition-transform duration-500 group-hover:scale-105  "
           />
-        </svg>
-      </a>
-    </div>
+        ) : (
+         
+          <div className="w-full h-full bg-neutral-200   flex items-center justify-center">
+            <p className="text-neutral-500">No Image</p>
+          </div>
+        )}
+      </div>
+
+      {/* Content container */}
+      <div className="p-3 sm:p-4">
+        <div className="flex justify-between items-center p-2">
+          <h3 className="text-lg sm:text-xl font-bold">{title}</h3>
+          {link && (
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 text-white">
+              <FaArrowRight />
+            </div>
+          )}
+        </div>
+      </div>
+    </a>
   );
 };
 
